@@ -28,8 +28,9 @@ sudo mokutil --import /var/lib/dkms/mok.pub
 ```
 then rebooting and enrolling the key when prompted.
 
-## Patch
 
-The patch is taken from here:
+## Credit
 
-https://github.com/Seven0492/kernel-patches/blob/main/cm749.patch
+This repo is based on https://github.com/xoocoon/hp-15-ew0xxx-snd-fix/
+
+The patch is taken from here: https://github.com/Seven0492/kernel-patches/blob/main/cm749.patch
