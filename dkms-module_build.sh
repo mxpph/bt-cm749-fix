@@ -23,7 +23,7 @@ if dmesg | grep -q 'initramfs'; then
   elif grep -q "^ID=arch" /etc/os-release; then
     mkinitcpio -P
   elif grep -q "^ID=fedora" /etc/os-release; then
-    sudo dracut --regenerate-all --force
+    sudo dracut --regenerate-all --force --parallel
   else
     echo "Update of initramfs not (yet) supported for your Linux distro. You might want to modify the distro-specific commands."
   fi
