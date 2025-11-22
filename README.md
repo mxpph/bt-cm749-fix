@@ -4,6 +4,8 @@ DKMS modules for fixing bluetooth support on Linux for UGREEN Bluetooth 5.4 USB 
 - CM749
 - and other devices based on the BR8554 chip potentially
 
+**This fix is only required on pre-6.18 kernels, as the patch is set to be merged in that release.**
+
 ## Usage
 
 First, make the script executable, then execute it:
@@ -33,4 +35,4 @@ then rebooting and enrolling the key when prompted.
 
 This repo is based on https://github.com/xoocoon/hp-15-ew0xxx-snd-fix/
 
-The patch is taken from here: https://github.com/Seven0492/kernel-patches/blob/main/cm749.patch
+The patch is taken from here: https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git/patch/drivers/bluetooth?id=7722d6fb54e428a8f657fccf422095a8d7e2d72c

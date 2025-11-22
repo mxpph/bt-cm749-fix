@@ -70,29 +70,13 @@ cat << EOF > "/usr/src/${KERNEL_MODULE_NAME}-${DKMS_MODULE_VERSION}/dkms.conf"
 PACKAGE_NAME="${KERNEL_MODULE_NAME}"
 PACKAGE_VERSION="${DKMS_MODULE_VERSION}"
 
-BUILT_MODULE_NAME[0]="bluetooth"
+BUILT_MODULE_NAME[0]="btusb"
 BUILT_MODULE_LOCATION[0]="."
 DEST_MODULE_LOCATION[0]="/updates/dkms"
 
-BUILT_MODULE_NAME[1]="rfcomm"
-BUILT_MODULE_LOCATION[1]="rfcomm"
-DEST_MODULE_LOCATION[1]="/updates/dkms/rfcomm"
-
-BUILT_MODULE_NAME[2]="bnep"
-BUILT_MODULE_LOCATION[2]="bnep"
-DEST_MODULE_LOCATION[2]="/updates/dkms/bnep"
-
-BUILT_MODULE_NAME[3]="hidp"
-BUILT_MODULE_LOCATION[3]="hidp"
-DEST_MODULE_LOCATION[3]="/updates/dkms/hidp"
-
-BUILT_MODULE_NAME[4]="bluetooth_6lowpan"
-BUILT_MODULE_LOCATION[4]="."
-DEST_MODULE_LOCATION[4]="/updates/dkms"
-
 MAKE[0]="make${CC_PARAMETER} -C \${kernel_source_dir} M=\${dkms_tree}/\${PACKAGE_NAME}/\${PACKAGE_VERSION}/build"
 
-PRE_BUILD="kernel-module_patch.sh net/bluetooth"
+PRE_BUILD="kernel-module_patch.sh drivers/bluetooth"
 
 AUTOINSTALL="yes"
 EOF
